@@ -1,33 +1,81 @@
 @media (min-width: 40em) {
-  /* TODO */
+  main {
+    max-width: 45rem;
+    margin-inline: auto;
+  }
 }
 
 @media (min-width: 60em) {
-  /* TODO */
+  main {
+    max-width: 60rem;
+  }
+
+  #projekty {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 @media (min-width: 80em) {
-  /* TODO */
+  main {
+    max-width: 75rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* TODO */
+    color-scheme: dark;
+    --bg: #121820;
+    --surface: #1e2935;
+    --text: #f1f5f9;
+    --primary: #8bbcff;
+    --border: #526273;
   }
 }
 
 @media (prefers-contrast: more) {
-  /* TODO */
+  * {
+    border-color: currentColor;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  :focus-visible {
+    outline: 0.2rem solid currentColor;
+    outline-offset: 0.2rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* TODO */
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  /* TODO */
+  * {
+    backdrop-filter: none !important;
+    opacity: 1;
+  }
 }
 
 @media (forced-colors: active) {
-  /* TODO */
+  :focus-visible {
+    outline: 0.2rem solid Highlight;
+  }
+
+  a {
+    color: LinkText;
+  }
+
+  .card {
+    border: 1px solid CanvasText;
+  }
 }
